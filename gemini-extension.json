@@ -1,0 +1,11 @@
+{
+  "name": "catchmycall",
+  "version": "1.0.0",
+  "description": "Your business phone and WhatsApp from Gemini: calls, transcripts, leads, contacts and WhatsApp campaigns through the CatchMyCall MCP server.",
+  "contextFileName": "GEMINI.md",
+  "mcpServers": {
+    "catchmycall": {
+      "httpUrl": "https://mcp.catchmycall.ai/mcp"
+    }
+  }
+}
