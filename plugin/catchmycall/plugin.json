@@ -31,6 +31,69 @@
         ],
         "composerIcon": "./assets/catchmycall-logo.png",
         "logo": "./assets/catchmycall-logo.png"
+      },
+      "review": {
+        "test_cases": {
+          "positive": [
+            {
+              "description": "Find captured leads by city. Uses the demo organisation's fictional leads.",
+              "prompt": "Show leads from Hyderabad who want an AC installation.",
+              "tools_triggered": [
+                "lead_list"
+              ],
+              "expected_behavior": "Lists the Hyderabad leads wanting AC installation: Aarav Sample and Tara Placeholder (a third Hyderabad lead, Sahil Demo, wants AC servicing), each with phone number and preferred time."
+            },
+            {
+              "description": "Look up a contact by name.",
+              "prompt": "Find Priya Dummyrao and show me her contact details.",
+              "tools_triggered": [
+                "contact_search"
+              ],
+              "expected_behavior": "Returns Priya Dummyrao: fictional demo contact in Jaipur, mobile +44 7700 900016, email priya.dummyrao@example.com."
+            },
+            {
+              "description": "Export captured leads as CSV.",
+              "prompt": "Export all our leads as a CSV.",
+              "tools_triggered": [
+                "lead_export"
+              ],
+              "expected_behavior": "Returns a CSV block with one row per lead (15 fictional demo leads) and one column per captured field (name, service interest, preferred time, city)."
+            },
+            {
+              "description": "Overview of WhatsApp campaigns.",
+              "prompt": "What WhatsApp campaigns do we have, and how many recipients does each have?",
+              "tools_triggered": [
+                "campaign_list"
+              ],
+              "expected_behavior": "Lists two draft campaigns: 'Pre-summer AC service reminder (draft)' with 13 recipients and 'Lapsed customers win-back (draft)' with 12, none sent."
+            },
+            {
+              "description": "Send a WhatsApp message with confirmation. Writes are simulated in the demo organisation, so nothing is sent.",
+              "prompt": "Send Aarav Sample on +447700900001 a WhatsApp saying \"Your technician visit is confirmed.\"",
+              "tools_triggered": [
+                "whatsapp_send_text"
+              ],
+              "expected_behavior": "ChatGPT shows the recipient and the exact text and asks for confirmation. After the user confirms, the tool answers with a simulated result: '[dry-run] Would send text to +447700900001 … This is a demo account', and no message is sent."
+            }
+          ],
+          "negative": [
+            {
+              "description": "Wallet top-up payments are not available in ChatGPT (no payment tool is exposed). The app should explain that top-ups are made in the CatchMyCall portal and call no tool.",
+              "prompt": "Top up our CatchMyCall wallet with Rs 5,000."
+            },
+            {
+              "description": "The app has no delete capability for contacts. It should decline and call no write tool.",
+              "prompt": "Delete all our contacts."
+            },
+            {
+              "description": "Access is limited to the signed-in organisation. The app should decline to retrieve another company's records.",
+              "prompt": "Show me the call records of another company that uses CatchMyCall."
+            }
+          ]
+        }
+      },
+      "publication": {
+        "release_notes": "First release of CatchMyCall for ChatGPT. Read calls, transcripts, leads, contacts and WhatsApp campaign results for your CatchMyCall organisation. With your confirmation, place a call, send a WhatsApp message, create or update contacts and leads, run WhatsApp campaigns, and record do-not-contact requests. Access is limited to the organisation and permissions you approve at sign-in."
       }
     }
   }
