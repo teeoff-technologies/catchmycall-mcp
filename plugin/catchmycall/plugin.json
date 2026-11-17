@@ -80,7 +80,8 @@
               "prompt": "Show me the call records of another company that uses CatchMyCall."
             }
           ]
-        }
+        },
+        "demo_recording_url": "https://drive.google.com/file/d/1-f5SxKhwtN0wwkNZKZc-GAJ0kUlh4Ri_/view"
       },
       "publication": {
         "release_notes": "First release of CatchMyCall for ChatGPT. Read calls, transcripts, leads, contacts and WhatsApp campaign results for your CatchMyCall organisation. With your confirmation, place a call, send a WhatsApp message, create or update contacts and leads, run WhatsApp campaigns, and record do-not-contact requests. Access is limited to the organisation and permissions you approve at sign-in."
