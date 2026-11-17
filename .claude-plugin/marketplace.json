@@ -1,0 +1,11 @@
+{
+  "name": "catchmycall",
+  "owner": { "name": "Teeoff Technologies Private Limited", "url": "https://catchmycall.ai" },
+  "plugins": [
+    {
+      "name": "catchmycall",
+      "source": "./plugin/catchmycall",
+      "description": "Work your business phone and WhatsApp from Claude through the CatchMyCall connector."
+    }
+  ]
+}

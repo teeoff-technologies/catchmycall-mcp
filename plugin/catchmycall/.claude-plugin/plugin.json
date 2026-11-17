@@ -1,0 +1,10 @@
+{
+  "name": "catchmycall",
+  "displayName": "CatchMyCall",
+  "version": "1.0.0",
+  "description": "Work your business phone and WhatsApp from Claude: review missed calls and the leads your AI agent captured, follow up, run WhatsApp campaigns and respect opt-outs, through the CatchMyCall connector.",
+  "author": { "name": "Teeoff Technologies Private Limited", "url": "https://catchmycall.ai" },
+  "homepage": "https://app.catchmycall.ai/docs/connector",
+  "repository": "https://github.com/teeoff-technologies/catchmycall-mcp",
+  "license": "MIT"
+}
