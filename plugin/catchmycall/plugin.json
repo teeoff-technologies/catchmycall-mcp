@@ -1,0 +1,31 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "catchmycall",
+  "version": "1.0.0",
+  "description": "Work your business phone and WhatsApp from the assistant: calls, leads, contacts and WhatsApp campaigns through the CatchMyCall connector.",
+  "author": { "name": "Teeoff Technologies Private Limited", "url": "https://catchmycall.ai" },
+  "homepage": "https://catchmycall.ai",
+  "extensions": {
+    "com.openai": {
+      "interface": {
+        "displayName": "CatchMyCall",
+        "shortDescription": "Business calls and WhatsApp",
+        "longDescription": "CatchMyCall runs a business's AI phone agents and WhatsApp. Connect your CatchMyCall account to review which calls came in and what the AI agent captured, read call transcripts, find a contact and their WhatsApp history, work with leads (correct a misheard detail, set a pipeline status, export a list), check how a WhatsApp campaign performed, and, with your confirmation, place a call or send a WhatsApp message from your business's own numbers. You can also check and record do-not-contact requests. Every read and write is limited to the organisation you sign in to, and you approve exactly which permissions the app gets when you connect. A CatchMyCall account is required (sign up at app.catchmycall.ai). CatchMyCall is a business-communications product and is not designed for medical records.",
+        "developerName": "Teeoff Technologies Private Limited",
+        "category": "Productivity",
+        "capabilities": ["Read", "Write"],
+        "websiteURL": "https://catchmycall.ai",
+        "supportURL": "https://app.catchmycall.ai/docs/connector",
+        "privacyPolicyURL": "https://app.catchmycall.ai/privacy",
+        "termsOfServiceURL": "https://app.catchmycall.ai/terms",
+        "defaultPrompt": [
+          "Which calls did we miss yesterday, and did the AI agent capture a lead from any of them?",
+          "Show this week's new leads and export them as a CSV.",
+          "How did our last WhatsApp campaign do: sent, delivered, read, replied?"
+        ],
+        "composerIcon": "./assets/catchmycall-logo.png",
+        "logo": "./assets/catchmycall-logo.png"
+      }
+    }
+  }
+}
